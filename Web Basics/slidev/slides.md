@@ -23,7 +23,18 @@ layout: statement
 preload: false
 ---
 
-<div style="margin: 0; position: absolute; top: 50%; left: 65%; transform: translate(-50%, -50%);" class="font-700 text-[20rem] text-[#262626] opacity-40">
+<div
+v-motion
+  :initial="{ opacity: 0, left: '50%', }"
+  :enter="{ 
+    opacity: 1,
+    left: '75%',
+    transition: {
+      duration: 1750,
+    },
+  }"
+ style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+  class="font-700 text-[20rem] text-[#262626] opacity-40">
 1
 </div>
 
