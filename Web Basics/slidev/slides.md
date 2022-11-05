@@ -30,11 +30,7 @@ preload: false
     opacity: 1,
     scale: 1.3,
     transition: {
-      delay: 250,
-      scale: {
-        type: 'spring',
-        stiffness: 500,
-      }
+      duration: 1750,
     },
   }">
 ماهو الأنترنت؟
