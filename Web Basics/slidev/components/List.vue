@@ -1,5 +1,5 @@
 <template>
-    <div class="w-min border-2 border-[#262626] rounded flex" :class="{ 'flex-col w-96' : col }">
+    <div class="border-2 border-[#262626] rounded flex justify-center w-min mr-4" :class="{ 'flex-col w-96' : col }">
         <slot />
     </div>
 </template>

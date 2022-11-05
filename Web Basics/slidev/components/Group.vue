@@ -7,9 +7,9 @@
         </List>
 
         <Panels :col="col">
-            <TabPanel>
+            <Panel>
                 <slot :name="'tab-' + selected" />
-            </TabPanel>
+            </Panel>
         </Panels>
     </div>
 </template>
