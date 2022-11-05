@@ -72,12 +72,49 @@ preload: false
   الانترنت هو مجموعة من هذه الشبكات، وهو ما يسمح لك بالاتصال بالويب.
   </div>
 
-  <div class="flex items-start">
+  <div class="flex justify-start items-start w-full">
+<Group class="-mt-16" :tabs="['LAN', 'WAN', 'INTERNET']">
+  <template #tab-1>
+```plantuml
+!theme black-knight
+skinparam DefaultFontName system-ui
+rectangle "شبكة المنطقة المحلية (LAN)" {
+    "خالد"
+    "زينب"
+    "حسام"
+    "زين"
+}
+```
+  </template>
 
+  <template #tab-2>
+```plantuml
+!theme black-knight
+skinparam DefaultFontName system-ui
+rectangle "شبكة المنطقة الواسعة (WAN)" {
+  rectangle "شبكة المنطقة المحلية (LAN)" {
+    "خالد"
+    "زينب"
+    "حسام"
+    "زين"
+  }
+  rectangle "شبكة المنطقة المحلية (LAN) 2" {
+    "محمد"
+    "عبدالله"
+    "سارة"
+    "محمود"
+  }
+}
+```
+  </template>
+
+  <template #tab-3>
+    
 ```plantuml
 @startuml
 !theme black-knight
 skinparam DefaultFontName system-ui
+
 rectangle "شبكة الأنترنت ( الشبكة الأكبر )" {
   rectangle "شبكة المنطقة المحلية (LAN)" {
     "خالد"
@@ -87,17 +124,25 @@ rectangle "شبكة الأنترنت ( الشبكة الأكبر )" {
   }
   
   rectangle "شبكة المنطقة الواسعة (WAN)" {
-    "محمد"
-    "عبدالله"
-    "سارة"
-    "محمود"
-    "حسن"
-    "نور"
+    rectangle "شبكة المنطقة المحلية (LAN)" as LN1 {
+      "محمد"
+      "نور"
+      "حسن"
+    }
+
+    rectangle "شبكة المنطقة المحلية (LAN)" as LN2 {
+      "رضا"
+      "قاسم"
+      "موسى"
+      "احمد"
+    }
   }
 }
 
 @enduml
 ```
+  </template>
+</Group>
 
   </div>
 </div>
