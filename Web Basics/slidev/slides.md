@@ -3,8 +3,8 @@ theme: apple-basic
 layout: intro
 title: Welcome to Slidev
 fonts:
-  sans: 'Tajawal '
-  mono: Fira Code
+  sans: "Tajawal "
+  mono: "Fira Code"
 preload: false
 ---
 
@@ -17,7 +17,6 @@ preload: false
     حسن الخالدي
   </span>
 </div>
-
 
 ---
 layout: statement
@@ -98,10 +97,10 @@ v-motion
 skinparam DefaultFontName system-ui
 
 rectangle "شبكة المنطقة المحلية (LAN)" {
-    "خالد"
-    "زينب"
-    "حسام"
-    "زين"
+    archimate #Technology "Computer 1" <<device>>
+    archimate #Technology "Computer 2" <<device>>
+    archimate #Technology "Computer 3" <<device>>
+    archimate #Technology "Computer X" <<device>>
 }
 ```
   </template>
@@ -112,16 +111,16 @@ rectangle "شبكة المنطقة المحلية (LAN)" {
 skinparam DefaultFontName system-ui
 rectangle "شبكة المنطقة الواسعة (WAN)" {
   rectangle "شبكة المنطقة المحلية (LAN)" {
-    "خالد"
-    "زينب"
-    "حسام"
-    "زين"
+    archimate #Technology "Computer 1" as S2C1 <<device>>
+    archimate #Technology "Computer 2" as S2C2 <<device>>
+    archimate #Technology "Computer 3" as S2C3 <<device>>
+    archimate #Technology "Computer X" as S2C4 <<device>>
   }
-  rectangle "شبكة المنطقة المحلية (LAN) 2" {
-    "محمد"
-    "عبدالله"
-    "سارة"
-    "محمود"
+  rectangle "شبكة المنطقة المحلية (LAN) X" {
+    archimate #Technology "Computer 1" as S2C5 <<device>>
+    archimate #Technology "Computer 2" as S2C6 <<device>>
+    archimate #Technology "Computer 3" as S2C7 <<device>>
+    archimate #Technology "Computer X" as S2C8 <<device>>
   }
 }
 ```
@@ -135,25 +134,26 @@ rectangle "شبكة المنطقة الواسعة (WAN)" {
 skinparam DefaultFontName system-ui
 
 rectangle "شبكة الأنترنت ( الشبكة الأكبر )" {
-  rectangle "شبكة المنطقة المحلية (LAN)" {
-    "خالد"
-    "زينب"
-    "حسام"
-    "زين"
+  rectangle "شبكة المنطقة المحلية (LAN) X" {
+    archimate #Technology "Computer 1" <<device>>
+    archimate #Technology "Computer 2" <<device>>
+    archimate #Technology "Computer 3" <<device>>
+    archimate #Technology "Computer 4" <<device>>
   }
   
   rectangle "شبكة المنطقة الواسعة (WAN)" {
-    rectangle "شبكة المنطقة المحلية (LAN)" as LN1 {
-      "محمد"
-      "نور"
-      "حسن"
+    rectangle "شبكة المنطقة المحلية (LAN) Y" as LN1 {
+      archimate #Technology "Computer 1" as S2C1 <<device>>
+      archimate #Technology "Computer 2" as S2C2 <<device>>
+      archimate #Technology "Computer 3" as S2C3 <<device>>
+      archimate #Technology "Computer 4" as S2C4 <<device>>
     }
 
-    rectangle "شبكة المنطقة المحلية (LAN)" as LN2 {
-      "رضا"
-      "قاسم"
-      "موسى"
-      "احمد"
+    rectangle "شبكة المنطقة المحلية (LAN) Z" as LN2 {
+      archimate #Technology "Computer 1" as S2C5 <<device>>
+      archimate #Technology "Computer 2" as S2C6 <<device>>
+      archimate #Technology "Computer 3" as S2C7 <<device>>
+      archimate #Technology "Computer 4" as S2C8 <<device>>
     }
   }
 }
@@ -409,10 +409,18 @@ layout: intro
 class: text-center
 ---
 
-# شكرًا لكم
+<div class="grid grid-cols-2 items-center justify-center gap-10">
+  <div>
 
-<HandWave
-style="margin: 0; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);"
-class="font-700 text-[20rem] text-[#262626] opacity-30">
-👋
-</HandWave>
+# شكرًا لكم
+فريق النخبة البرمجي
+
+  </div>
+  <div>
+    <HandWave class="font-700 text-[15rem] text-[#262626]" />
+  </div>
+</div>
+
+
+
+<!-- style="margin: 0; position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);" -->
