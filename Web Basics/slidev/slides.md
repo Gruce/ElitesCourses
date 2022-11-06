@@ -3,8 +3,8 @@ theme: apple-basic
 layout: intro
 title: Welcome to Slidev
 fonts:
-  sans: "Tajawal "
-  mono: "Fira Code"
+  sans: 'Tajawal '
+  mono: Fira Code
 preload: false
 ---
 
@@ -17,6 +17,7 @@ preload: false
     حسن الخالدي
   </span>
 </div>
+
 
 ---
 layout: statement
