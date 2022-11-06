@@ -386,11 +386,44 @@ server <-left- client : "(HTTP Request) طلب"
 الغرض الرئيسي من لغة CSS هو تمكين الفصل بين كود المحتوى (HTML) وكود العرض (CSS)،
 بما في ذلك التخطيط والألوان والخطوط.
 
-```css {all|1,3|2|all}
-h1 {
-  color: red;
-}
-```
+
+<div class="grid grid-cols-2 items-center justify-center gap-10">
+<v-clicks>
+  <div>
+
+  ```css
+  h1 {
+    color: red;
+  }
+  ```
+
+  </div>
+  <div class="border border-[#262626] rounded p-1" dir="ltr">
+    <h1 style="color: red">
+      Hello World!  
+    </h1>
+  </div>
+
+  <div>
+
+  ```css
+  h1 {
+    color: green;
+    font-size: 4rem; /* 64px */
+    font-family: serif;
+  }
+  ```
+
+  </div>
+  <div class="border border-[#262626] rounded px-1 py-3.5" dir="ltr">
+    <h1 style="color: green; font-size: 4rem; font-family: serif;">
+      Hello World!  
+    </h1>
+  </div>
+</v-clicks>
+</div>
+
+
 
 ---
 
@@ -400,9 +433,33 @@ h1 {
 
 هي لغة برمجية عالية المستوى تستخدم أساساً في متصفحات الويب ولها استخدامات واسعة أخرى في المجالات الأخرى , تضيف اساساً تفاعلية عالية الى صفحة الويب.
 
-```js
-const title = "Hello World!";
+
+
+
+<div class="grid grid-cols-2 items-center justify-center gap-10">
+<v-clicks>
+  <div>
+
+```html
+<!-- HTML -->
+<button onclick="myFunction()">Click me!</button>
 ```
+```js
+// JavaScript
+function myFunction() {
+  alert("Hello World!");
+}
+```
+
+  </div>
+  <div class="flex justify-center border border-[#262626] rounded px-1 py-16" dir="ltr">
+    <TempJS />
+  </div>
+
+
+
+</v-clicks>
+</div>
 
 ---
 layout: intro
