@@ -62,11 +62,11 @@ v-motion
       duration: 1750,
     },
   }" class="z-10">
-ماهو الويب؟
+ماهو الأنترنت؟
 </h1>
 ---
 
-# ماهو الويب؟
+# ماهو الأنترنت؟
 
 
 
@@ -76,7 +76,8 @@ v-motion
 
 <v-clicks>
 
-- معرفة ماهو الويب
+- معرفة ماهو الأنترنت
+- شرح الفرق بين الأنترنت والويب
 - معرفة المكونات الرئيسية للأنترنت
 - معرفة أنواع البروتوكولات
 - معرفة بروتوكول HTTP
@@ -109,7 +110,7 @@ v-motion
 !theme black-knight
 skinparam DefaultFontName system-ui
 
-rectangle "LAN" {
+rectangle "شبكة المنطقة المحلية (LAN)" {
     archimate #Technology "Computer 1" <<device>>
     archimate #Technology "Computer 2" <<device>>
     archimate #Technology "Computer 3" <<device>>
@@ -122,14 +123,14 @@ rectangle "LAN" {
 ```plantuml
 !theme black-knight
 skinparam DefaultFontName system-ui
-rectangle "WAN" {
-  rectangle "LAN Y" {
+rectangle "شبكة المنطقة الواسعة (WAN)" {
+  rectangle "شبكة المنطقة المحلية (LAN)" {
     archimate #Technology "Computer 1" as S2C1 <<device>>
     archimate #Technology "Computer 2" as S2C2 <<device>>
     archimate #Technology "Computer 3" as S2C3 <<device>>
     archimate #Technology "Computer X" as S2C4 <<device>>
   }
-  rectangle "LAN X" {
+  rectangle "شبكة المنطقة المحلية (LAN) X" {
     archimate #Technology "Computer 1" as S2C5 <<device>>
     archimate #Technology "Computer 2" as S2C6 <<device>>
     archimate #Technology "Computer 3" as S2C7 <<device>>
@@ -146,23 +147,23 @@ rectangle "WAN" {
 !theme black-knight
 skinparam DefaultFontName system-ui
 
-rectangle "Internet" {
-  rectangle "LAN X" {
+rectangle "شبكة الأنترنت ( الشبكة الأكبر )" {
+  rectangle "شبكة المنطقة المحلية (LAN) X" {
     archimate #Technology "Computer 1" <<device>>
     archimate #Technology "Computer 2" <<device>>
     archimate #Technology "Computer 3" <<device>>
     archimate #Technology "Computer 4" <<device>>
   }
   
-  rectangle "WAN" {
-    rectangle "LAN Y" as LN1 {
+  rectangle "شبكة المنطقة الواسعة (WAN)" {
+    rectangle "شبكة المنطقة المحلية (LAN) Y" as LN1 {
       archimate #Technology "Computer 1" as S2C1 <<device>>
       archimate #Technology "Computer 2" as S2C2 <<device>>
       archimate #Technology "Computer 3" as S2C3 <<device>>
       archimate #Technology "Computer 4" as S2C4 <<device>>
     }
 
-    rectangle "LAN Z" as LN2 {
+    rectangle "شبكة المنطقة المحلية (LAN) Z" as LN2 {
       archimate #Technology "Computer 1" as S2C5 <<device>>
       archimate #Technology "Computer 2" as S2C6 <<device>>
       archimate #Technology "Computer 3" as S2C7 <<device>>
@@ -222,7 +223,7 @@ image: 'internet.jpg'
 @startuml
 !theme black-knight
 skinparam DefaultFontName system-ui
-archimate #Technology "Server" <<technology-device>>
+archimate #Technology "(Server) الخادم" <<technology-device>>
 @enduml
 ```
   </div>
@@ -252,11 +253,11 @@ archimate #Technology "Server" <<technology-device>>
 skinparam DefaultFontName system-ui
 skinparam ArrowColor #777777
 
-archimate #Technology "Server" as server <<technology-device>>
-archimate #Technology "Client" as client <<technology-device>>
+archimate #Technology "(Server) الخادم" as server <<technology-device>>
+archimate #Technology "(Client) العميل" as client <<technology-device>>
 
-server -right-> client : "Response"
-server <-left- client : "Request"
+server -right-> client : "(Response) إستجابة"
+server <-left- client : "(Request) طلب"
 
 
 @enduml
@@ -290,11 +291,11 @@ server <-left- client : "Request"
 skinparam DefaultFontName system-ui
 skinparam ArrowColor #777777
 
-archimate #Technology "Server" as server <<technology-device>>
-archimate #Technology "Client" as client <<technology-device>>
+archimate #Technology "(Server) الخادم" as server <<technology-device>>
+archimate #Technology "(Client) العميل" as client <<technology-device>>
 
-server -right-> client : "HTTP Response"
-server <-left- client : "HTTP Request"
+server -right-> client : "(HTTP Response) إستجابة"
+server <-left- client : "(HTTP Request) طلب"
 
 
 @enduml
@@ -353,11 +354,11 @@ server <-left- client : "HTTP Request"
 skinparam DefaultFontName system-ui
 skinparam ArrowColor #777777
 
-archimate #Technology "Server" as server <<technology-device>>
-archimate #Technology "Client" as client <<technology-device>>
+archimate #Technology "(Server) الخادم" as server <<technology-device>>
+archimate #Technology "(Client) العميل" as client <<technology-device>>
 
-server -right-> client : "HTTP Response"
-server <-left- client : "HTTP Request"
+server -right-> client : "(HTTP Response) إستجابة"
+server <-left- client : "(HTTP Request) طلب"
 
 
 
